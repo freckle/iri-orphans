@@ -1,6 +1,6 @@
-module Iri.Orphans.QuickCheck.ArbitrarySpec (
-    spec
-      ) where
+module Iri.Orphans.QuickCheck.ArbitrarySpec
+  ( spec
+  ) where
 
 import Prelude
 
