@@ -32,13 +32,12 @@
         };
 
         devShells.default = nixpkgs.stable.mkShell {
-          buildInputs = with (nixpkgs.stable); [
-            zlib
-          ];
+          buildInputs = with (nixpkgs.stable); [ zlib ];
 
           nativeBuildInputs = with (packages); [
             fourmolu
             ghc
+            nixpkgs.stable.nixfmt-rfc-style
           ];
 
           shellHook = ''
