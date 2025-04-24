@@ -2,6 +2,7 @@ resolver: lts-21.25
 
 extra-deps:
   - debug-print-0.2.0.1
+  - hspec-api-2.11.10
   - hspec-2.11.10
   - hspec-core-2.11.10
   - hspec-discover-2.11.10
