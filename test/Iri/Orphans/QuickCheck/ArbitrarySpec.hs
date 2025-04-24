@@ -4,13 +4,12 @@ module Iri.Orphans.QuickCheck.ArbitrarySpec
 
 import Prelude
 
-import Test.Hspec
-
 import Data.List (intercalate)
 import Iri.Data (HttpIri (..))
+import Iri.Orphans.QuickCheck ()
 import Iri.Parsing.Text qualified
 import Iri.Rendering.Text qualified
-import Iri.Orphans.QuickCheck()
+import Test.Hspec
 import Test.QuickCheck (counterexample, property)
 
 spec :: Spec
