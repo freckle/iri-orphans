@@ -44,18 +44,15 @@ when:
 dependencies:
   - base < 5
 
+language: GHC2021
+
 default-extensions:
   - ApplicativeDo
   - BangPatterns
   - BlockArguments
   - DataKinds
-  - DeriveAnyClass
-  - DeriveFoldable
-  - DeriveFunctor
-  - DeriveGeneric
-  - DeriveLift
-  - DeriveTraversable
   - DerivingStrategies
+  - DerivingVia
   - FlexibleContexts
   - FlexibleInstances
   - GADTs
@@ -74,3 +71,31 @@ default-extensions:
 
 library:
   source-dirs: src
+  dependencies:
+    - aeson
+    - autodocodec
+    - bytestring
+    - debug-print
+    - generic-arbitrary
+    - ip
+    - iri
+    - lens
+    - openapi3
+    - persistent
+    - QuickCheck
+    - serialise
+    - text
+    - vector
+    - wide-word
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options: -threaded -rtsopts "-with-rtsopts=-N"
+    dependencies:
+      - hspec
+      - hspec-junit-formatter
+      - iri
+      - iri-orphans
+      - QuickCheck
