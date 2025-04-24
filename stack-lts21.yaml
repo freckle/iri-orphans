@@ -1,7 +1,7 @@
 resolver: lts-21.25
 
 extra-deps:
-  - debug-print-0.2.0.0
+  - debug-print-0.2.0.1
   - ip-1.7.8
   - iri-0.5.1.1
   - text-builder-1.0.0.3
