@@ -3,6 +3,5 @@ resolver: nightly-2025-04-24
 extra-deps:
   - debug-print-0.2.0.1
   - iri-0.5.1.1
-  - openapi3-3.2.4
   - text-builder-1.0.0.3
   - text-builder-core-0.1.1.1
