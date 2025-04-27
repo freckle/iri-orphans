@@ -76,7 +76,6 @@ library
     , aeson
     , autodocodec
     , base <5
-    , bytestring
     , debug-print
     , generic-arbitrary
     , ip

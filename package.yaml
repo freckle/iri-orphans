@@ -74,7 +74,6 @@ library:
   dependencies:
     - aeson
     - autodocodec
-    - bytestring
     - debug-print
     - generic-arbitrary
     - ip
