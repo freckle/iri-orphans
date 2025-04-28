@@ -1,0 +1,147 @@
+cabal-version: 1.18
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           iri-orphans
+version:        0.0.0.0
+synopsis:       Orphan instances for iri
+description:    Orphan instances for types defined in the `iri` package.
+category:       Utils
+homepage:       https://github.com/freckle/iri-orphans#readme
+bug-reports:    https://github.com/freckle/iri-orphans/issues
+maintainer:     Freckle Education
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    package.yaml
+extra-doc-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/freckle/iri-orphans
+
+library
+  exposed-modules:
+      Iri.Orphans
+      Iri.Orphans.Aeson
+      Iri.Orphans.Aeson.FromJSON
+      Iri.Orphans.Aeson.ToJSON
+      Iri.Orphans.Autodocodec
+      Iri.Orphans.Autodocodec.HasCodec
+      Iri.Orphans.DebugPrint
+      Iri.Orphans.DebugPrint.ToDebugPrintValue
+      Iri.Orphans.OpenApi
+      Iri.Orphans.OpenApi.ToSchema
+      Iri.Orphans.Persistent
+      Iri.Orphans.Persistent.PersistField
+      Iri.Orphans.Persistent.PersistFieldSql
+      Iri.Orphans.QuickCheck
+      Iri.Orphans.QuickCheck.Arbitrary
+      Iri.Orphans.Serialise
+      Iri.Orphans.Serialise.Serialise
+  other-modules:
+      Paths_iri_orphans
+  hs-source-dirs:
+      src
+  default-extensions:
+      ApplicativeDo
+      BangPatterns
+      BlockArguments
+      DataKinds
+      DerivingStrategies
+      DerivingVia
+      FlexibleContexts
+      FlexibleInstances
+      GADTs
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      NoImplicitPrelude
+      NoMonomorphismRestriction
+      OverloadedStrings
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeFamilies
+  ghc-options: -Weverything -Wno-all-missed-specialisations -Wno-missed-specialisations -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-safe -Wno-unsafe
+  build-depends:
+      QuickCheck
+    , aeson
+    , autodocodec
+    , base <5
+    , debug-print
+    , generic-arbitrary
+    , ip
+    , iri
+    , lens
+    , openapi3
+    , persistent
+    , serialise
+    , text
+    , vector
+    , wide-word
+  default-language: GHC2021
+  if impl(ghc >= 9.8)
+    ghc-options: -Wno-missing-role-annotations -Wno-missing-poly-kind-signatures
+  if impl(ghc >= 9.2)
+    ghc-options: -Wno-missing-kind-signatures
+  if impl(ghc >= 8.10)
+    ghc-options: -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module
+  if impl(ghc >= 8.8)
+    ghc-options: -fwrite-ide-info
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Iri.Orphans.QuickCheck.ArbitrarySpec
+      SpecHook
+      Paths_iri_orphans
+  hs-source-dirs:
+      test
+  default-extensions:
+      ApplicativeDo
+      BangPatterns
+      BlockArguments
+      DataKinds
+      DerivingStrategies
+      DerivingVia
+      FlexibleContexts
+      FlexibleInstances
+      GADTs
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      NoImplicitPrelude
+      NoMonomorphismRestriction
+      OverloadedStrings
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeFamilies
+  ghc-options: -Weverything -Wno-all-missed-specialisations -Wno-missed-specialisations -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-safe -Wno-unsafe -threaded -rtsopts "-with-rtsopts=-N"
+  build-depends:
+      QuickCheck
+    , base <5
+    , hspec
+    , hspec-junit-formatter
+    , iri
+    , iri-orphans
+  default-language: GHC2021
+  if impl(ghc >= 9.8)
+    ghc-options: -Wno-missing-role-annotations -Wno-missing-poly-kind-signatures
+  if impl(ghc >= 9.2)
+    ghc-options: -Wno-missing-kind-signatures
+  if impl(ghc >= 8.10)
+    ghc-options: -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module
+  if impl(ghc >= 8.8)
+    ghc-options: -fwrite-ide-info
